@@ -775,3 +775,14 @@ html{scroll-behavior:smooth}
 .kili-photos{aspect-ratio:4/3}
 
 .kili-links{justify-content:center}
+
+/* ===== YouTube video embed (Videography page) ===== */
+.video-embed{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  border-radius:var(--radius);
+  box-shadow:0 4px 16px rgba(0,0,0,.12);
+  background:#000;
+}
