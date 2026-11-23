@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Niamh Lynch | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="#projects">Portfolio</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- 1. INTRO BANNER: full-width coloured strip with photo, name, bio and links -->
+<header class="banner">
+  <section class="intro">
+    <img src="images/headshot.JPG" alt="Photo of Niamh Lynch">
+    <div>
+      <h1>Hi! I’m Niamh Lynch</h1>
+      <p>I am a third year Computing and Digital Media student currently looking for work placement.</p>
+      <p>This website has been self coded and includes my personal portfolio and contact information.</p>
+      <p>Check out my past and current projects below!</p>
+      <p>Contact info and external links:</p>
+      <div class="links">
+        <a href="mailto:niamhlynch9@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/niamh-lynch-ba2083109/">LinkedIn</a>
+        <a href="https://github.com/niavlynch">GitHub</a>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main>
+
+  <!-- 2. PROJECTS: filter buttons use data-filter, cards use data-category -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="media">Digital Media</button>
+      <button data-filter="software">Software Development</button>
+    </div>
+
+    <div class="grid">
+
+      <article class="card" data-category="media">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/graphics_banner2.png" alt="Blue Note Graphic Design">
+          </div>
+          <div class="slide">
+            <img src="images/banners/graphics_banner.png" alt="VHS Tapes">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="graphics.html">Freelance Graphic Design</a></h3>
+          <p>My collection of commissioned and conceptual graphic design.</p>
+          <a href="graphics.html">See project →</a>
+        </div>
+      </article>
+
+      <article class="card" data-category="media">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/eye_cinema_banner.png" alt="Eye Cinema loyalty program banner">
+          </div>
+          <div class="slide">
+            <img src="images/banners/eye_cinema_banner2.png" alt="Eye Cinema branding second image">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="eyecinema.html">Eye Cinema Branding</a></h3>
+          <p>Loyalty programme branding and promotional graphics for Eye Cinema.</p>
+          <a href="eyecinema.html">See project →</a>
+        </div>
+      </article>
+
+      <article class="card" data-category="media">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/postproduction_banner1.png" alt="Post production banner">
+          </div>
+          <div class="slide">
+            <img src="images/banners/postproduction_banner2.png" alt="Post production second banner">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="postproduction.html">Post Production</a></h3>
+          <p>Video editing and post production projects.</p>
+          <a href="postproduction.html">See project →</a>
+        </div>
+      </article>
+
+      <article class="card" data-category="software">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/ATYOU_banner.png" alt="ATYou website banner">
+          </div>
+          <div class="slide">
+            <img src="images/banners/ATYOU_banner2.png" alt="ATYou website second banner">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="atuwebsite.html">ATYou Website</a></h3>
+          <p>First year website development project.</p>
+          <a href="atuwebsite.html">See project →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="personal">
+    <h2>Personal Pursuits</h2>
+    <p>Some personal projects I am involved in outside of studies.</p>
+    <div class="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="media">Digital Media</button>
+      <button data-filter="other">Other</button>
+    </div>
+
+    <div class="grid">
+
+      <article class="card" data-category="other">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/kili_banner.png" alt="Kilimanjaro charity trek banner">
+          </div>
+          <div class="slide">
+            <img src="images/atukili/atukili1.jpg" alt="ATU Kilimanjaro photo">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="kilimanjaro.html">Charity trek to Kilimanjaro!</a></h3>
+          <p>My partnership with Choose A Challenge and Street Child charity as a 2027 challenge leader.</p>
+          <a href="kilimanjaro.html">See project →</a>
+        </div>
+      </article>
+
+      <article class="card" data-category="other">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/pubquiz_banner.png" alt="Charity pub quiz night banner">
+          </div>
+          <div class="slide">
+            <img src="images/banners/pubquiz_banner2.jpg" alt="Charity pub quiz night photo">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="pubquiz.html">Charity Pub Quiz Nights</a></h3>
+          <p>My self-hosted charity pub quiz nights!</p>
+          <a href="pubquiz.html">See project →</a>
+        </div>
+      </article>
+
+      <article class="card" data-category="media">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/photography/faves/fave_001.jpg" alt="Photograph from my personal collection">
+          </div>
+          <div class="slide">
+            <img src="images/photography/faves/fave_003.jpg" alt="Photograph from my personal collection">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="photography.html">Photography</a></h3>
+          <p>My personal photography collection.</p>
+          <a href="photography.html">See project →</a>
+        </div>
+      </article>
+      <article class="card" data-category="media">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/banners/videography_banner.jpg" alt="Videography banner">
+          </div>
+          <div class="slide">
+            <img src="images/banners/videography_banner.jpg" alt="Videography banner">
+          </div>
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="card-body">
+          <h3><a href="videography.html">Videography</a></h3>
+          <p>My personal videography.</p>
+          <a href="videography.html">See project →</a>
+        </div>
+      </article>
+    </div>
+
+    <h2>Achievement Board!</h2>
+    <div class="feature">
+      <picture>
+        <source media="(max-width:700px)" srcset="images/board_mobile.png">
+        <img src="images/board.png" alt="Cork board of my achievements" class="feature-img">
+      </picture>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <p>Get in touch:</p>
+  <div class="links">
+    <a href="mailto:niamhlynch9@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/niamh-lynch-ba2083109/">LinkedIn</a>
+    <a href="https://github.com/niavlynch">GitHub</a>
+  </div>
+  <p class="copyright">© Niamh Lynch</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
