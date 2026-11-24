@@ -1,4 +1,3 @@
-// Filter projects by category (each section filters only its own cards)
 document.querySelectorAll('section').forEach(section => {
   const buttons = section.querySelectorAll('.filters button');
   const cards = section.querySelectorAll('.card');
@@ -8,11 +7,10 @@ document.querySelectorAll('section').forEach(section => {
     const f = btn.dataset.filter;
     cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f));
     const grid = section.querySelector('.grid');
-    if (grid) grid.scrollLeft = 0;   // always start the row from the first card
+    if (grid) grid.scrollLeft = 0;
   }));
 });
 
-// Carousels (index page cards)
 document.querySelectorAll('.carousel').forEach(car => {
   const slides = car.querySelectorAll('.slide');
   let i = 0;
@@ -24,8 +22,7 @@ document.querySelectorAll('.carousel').forEach(car => {
   car.querySelector('.next').addEventListener('click', () => show(i + 1));
 });
 
-// Photo galleries (photography page): each .gallery runs separately
-let activeGallery = document.querySelector('.gallery');   // the gallery the arrow keys control
+let activeGallery = document.querySelector('.gallery');
 
 document.querySelectorAll('.gallery').forEach(gallery => {
   const mainImg = gallery.querySelector('.gallery-image');
@@ -34,16 +31,16 @@ document.querySelectorAll('.gallery').forEach(gallery => {
   let current = 0;
 
   function showPhoto(n, scroll = true) {
-    current = (n + thumbs.length) % thumbs.length;   // loops around at the ends
+    current = (n + thumbs.length) % thumbs.length;
     const thumb = thumbs[current];
     mainImg.src = thumb.src;
     mainImg.alt = thumb.alt;
-    mainImg.style.objectFit = thumb.dataset.fit || 'contain';          // data-fit="cover" fills the box, no bars
-    mainImg.style.objectPosition = thumb.dataset.position || 'center'; // data-position="top" etc.
+    mainImg.style.objectFit = thumb.dataset.fit || 'contain';
+    mainImg.style.objectPosition = thumb.dataset.position || 'center';
     thumbs.forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
     if (scroll) {
-      const strip = thumb.parentElement;   // scroll only the thumbnail strip, not the page
+      const strip = thumb.parentElement;
       strip.scrollTo({ left: thumb.offsetLeft - strip.offsetLeft - (strip.clientWidth - thumb.clientWidth) / 2, behavior: 'smooth' });
     }
     counter.textContent = (current + 1) + ' / ' + thumbs.length;
@@ -59,7 +56,6 @@ document.querySelectorAll('.gallery').forEach(gallery => {
   showPhoto(0, false);
 });
 
-// Left / right arrow keys move whichever gallery was used last
 document.addEventListener('keydown', e => {
   if (!activeGallery || !activeGallery.showPhoto) return;
   if (e.key === 'ArrowLeft')  activeGallery.showPhoto(activeGallery.getCurrent() - 1);
